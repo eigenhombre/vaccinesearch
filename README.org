@@ -8,7 +8,7 @@ USE AT YOUR OWN RISK.  See disclaimer below.
 
 ** Usage
 
-1. Install Leiningen (Clojure build tool)
+1. Install Java and [[https://leiningen.org/][Leiningen]] (Clojure build tool)
 1. download this repo
 1. =lein uberjar=
 1. Run the program with =java -jar target/uberjar/vaccine.jar <state> <lat> <lon> <max-sites>=
