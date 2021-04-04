@@ -1,0 +1,46 @@
+* Covid vaccine search by distance
+
+I wrote this for myself to find nearby Covid vaccination appointments.
+
+USE AT YOUR OWN RISK.  See disclaimer below.
+
+** Usage
+
+1. Install Leiningen (Clojure build tool)
+1. download this repo
+1. =lein uberjar=
+1. Run the program with =java -jar target/uberjar/vaccine.jar <state> <lat> <lon> <max-sites>=
+
+** Example:
+
+Use a small number of sites to test it out, e.g.:
+#+BEGIN_SRC
+java -jar target/uberjar/vaccine.jar IL 41.7989 -87.5854 3
+
+Warning: cache lookup for 21001 S LaGrange Rd FRANKFORT IL 60423
+[hyvee 153.3912736985627 Canton 825 N Main St Canton IL 61520 [40.56599982749657 -90.0349384941233]]
+[hyvee 114.67370852372156 Bloomington 1403 N Veterans Parkway Bloomington IL 61704 [40.49768505 -88.94988567110899]]
+#+END_SRC
+
+It's not possible to determine a lat/long for every site, so the number returned may be less.
+
+To find the nearest appointment, use a larger max:
+#+BEGIN_SRC
+java -jar target/uberjar/vaccine.jar IL 41.7989 -87.5854 9999 | tail -10
+#+END_SRC
+
+** Disclaimer
+
+This program makes no attempt to determine if you are eligible for
+vaccination at any particular location, nor are you guaranteed to
+obtain an appointment by using this program.  It is posted here solely
+in case it is helpful.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
