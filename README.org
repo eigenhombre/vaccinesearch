@@ -1,7 +1,7 @@
 * Covid vaccine search by distance
 
 I wrote this for myself to find nearby Covid vaccination appointments.
-It uses the `vaccinespotter.org` API to find appointments, and the
+It uses the =vaccinespotter.org= API to find appointments, and the
 Nominatum API to resolve latitude/longitude from street address.
 
 USE AT YOUR OWN RISK.  See disclaimer below.
